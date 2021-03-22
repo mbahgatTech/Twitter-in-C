@@ -25,7 +25,7 @@ void countStopWords(tweet * tweetList) {
                         }
                         
                         if (similarity == 1) { 
-                            if(isspace(tempNode -> text[j + k])) { // branch increments stopCount when there is a space in the text after words are matched (same length check)
+                            if(isspace(tempNode -> text[j + k]) || tempNode -> text[j + k] == '\0') { // branch increments stopCount when there is a space in the text after words are matched (same length check) or if its end of string
                                 stopCount++;
                             }
                         }    
